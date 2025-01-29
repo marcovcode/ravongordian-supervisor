@@ -1,0 +1,38 @@
+{
+	"manifest_version": 3,
+	"name": "Ravongordian Supervisor",
+	"version": "1.0",
+	"description": "You do bad stuff, Ravongordian supervisor will know.",
+	"icons": {
+		"16": "assets/ravongordian-supervisor.png",
+		"32": "assets/ravongordian-supervisor.png",
+		"48": "assets/ravongordian-supervisor.png",
+		"128": "assets/ravongordian-supervisor.png"
+	},
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "assets/ravongordian-supervisor.png",
+			"32": "assets/ravongordian-supervisor.png",
+			"48": "assets/ravongordian-supervisor.png",
+			"128": "assets/ravongordian-supervisor.png"
+		}
+	},
+	"permissions": ["activeTab", "storage"],
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"css": ["styles.css"],
+			"js": ["script.js"]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"assets/ravongordian-supervisor.png",
+				"assets/quack.mp3"
+			],
+			"matches": ["<all_urls>"]
+		}
+	]
+}
